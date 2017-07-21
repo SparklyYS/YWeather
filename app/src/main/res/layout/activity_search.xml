@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:fitsSystemWindows ="true">
+
+    <include
+        android:id="@+id/search_top_bar"
+        layout="@layout/view_search"/>
+
+
+    <android.support.v7.widget.RecyclerView
+    android:layout_below="@+id/search_top_bar"
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+
+<com.sparklyys.yweather.customview.SideLetterBar
+android:layout_below="@+id/search_top_bar"
+android:id="@+id/side"
+android:layout_width="36dp"
+android:layout_height="match_parent"
+android:layout_alignParentRight="true"
+    />
+    </RelativeLayout>

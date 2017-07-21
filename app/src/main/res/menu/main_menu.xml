@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/share_weather"
+        android:icon="@color/colorWhite"
+        android:title="分享天气"
+        app:showAsAction="withText" />
+
+    <item android:id="@+id/share_app"
+        android:title="分享应用"
+        app:showAsAction="withText" />
+
+    <item android:id="@+id/about_app"
+        android:title="关于"
+        app:showAsAction="withText" />
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/action_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:background="?selectableItemBackground"
+        android:src="@mipmap/common_back_arrow"/>
+
+    <EditText
+        android:id="@+id/searchTextView"
+        android:layout_toRightOf="@id/action_back"
+        android:drawableLeft="@mipmap/search"
+        android:drawablePadding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:hint="输入城市名或拼音"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/secondly_text_white"
+        android:textSize="16sp"
+        />
+
+    <ImageButton
+        android:id="@+id/action_empty_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackground"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/delete"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:backgroundTint="#10000000"
+        tools:targetApi="lollipop" />
+</RelativeLayout>

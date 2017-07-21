@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/main_background"
+    android:gravity="center_vertical">
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="16dp"
+        android:background="@drawable/bg_guide"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="6dp"
+        android:layout_weight="0.00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="未来天气"
+        />
+
+</LinearLayout>
