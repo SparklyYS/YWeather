@@ -12,11 +12,12 @@ import java.util.List;
 
 /**
  * Created by SparklyYS on 2017/7/21.
+ * 解析返回的JSON字符串工具类
+ * 解析实时天气
  * 解析天气列表
  */
 
 public class ParseWeatherUtil {
-
 
     public List<Weather_model> getInfomation(String jsonString) throws Exception {
         List<Weather_model> WeatherList = new ArrayList<>();

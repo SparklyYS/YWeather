@@ -11,11 +11,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sparklyys.yweather.fragment.CityFragment;
 import com.sparklyys.yweather.fragment.WeatherFragment;
 import com.sparklyys.yweather.model.Weather_model;
 import com.sparklyys.yweather.utils.HttpDownloader;
+import com.sparklyys.yweather.utils.NetUtil;
 import com.sparklyys.yweather.utils.ParseNowWeatherUtil;
 
 
@@ -71,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //检查网络状态是否良好
+        if (NetUtil.getNetWorkState(this) != NetUtil.NETWORN_NONE) {
+            Log.d("YWeather", "网络正常连接");
+            Toast.makeText(MainActivity.this, "网络正常连接", Toast.LENGTH_LONG).show();
+        } else {
+            Log.d("YWeather", "网络挂了");
+            Toast.makeText(MainActivity.this, "网络挂了", Toast.LENGTH_LONG).show();
+        }
+
         bindViews();
         setEvent();
         weather_tab.performClick(); //初始停留在weather_tab下
@@ -80,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Menu icons are inflated just as they were with actioner
+    //创建可供选择的菜单选项
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -100,8 +111,9 @@ public class MainActivity extends AppCompatActivity {
         city_tab = (TextView) findViewById(R.id.tab_city);
         weather_tab = (TextView) findViewById(R.id.tab_weather);
 
-        toolbar.setDisp
+        //设置自定义的toolbar为actionbar
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);        //隐藏label
     }
 
     /**

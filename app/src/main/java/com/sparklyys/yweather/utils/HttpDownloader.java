@@ -14,6 +14,8 @@ import java.net.URL;
 public class HttpDownloader {
     private URL url = null;
 
+
+
     /**
      * @param urlstr
      * @return
